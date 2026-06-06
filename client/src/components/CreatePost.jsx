@@ -29,7 +29,7 @@ function CreatePost({ onPost }) {
 
     try {
       setLoading(true);
-      const res = await axios.post('http://localhost:5000/api/posts', formData, {
+      const res = await axios.post('https://taskplanet-server-td9i.onrender.com/api/posts', formData, {
         headers: {
           Authorization: localStorage.getItem('token'),
           'Content-Type': 'multipart/form-data'

@@ -11,7 +11,7 @@ function PostCard({ post, onUpdate }) {
   const handleLike = async () => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/posts/${post._id}/like`,
+        `https://taskplanet-server-td9i.onrender.com/api/posts/${post._id}/like`,
         {},
         { headers: { Authorization: token } }
       );
@@ -26,7 +26,7 @@ function PostCard({ post, onUpdate }) {
     if (!comment.trim()) return;
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/posts/${post._id}/comment`,
+        `https://taskplanet-server-td9i.onrender.com/api/posts/${post._id}/comment`,
         { text: comment },
         { headers: { Authorization: token } }
       );
@@ -61,7 +61,7 @@ function PostCard({ post, onUpdate }) {
       {post.image && (
         <img
           className="post-image"
-          src={`http://localhost:5000/uploads/${post.image}`}
+          src={`https://taskplanet-server-td9i.onrender.com/uploads/${post.image}`}
           alt="post"
         />
       )}

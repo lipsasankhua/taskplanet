@@ -6,7 +6,7 @@ function Feed({ newPost }) {
   const [posts, setPosts] = useState([]);
 
   const fetchPosts = async () => {
-    const res = await axios.get('http://localhost:5000/api/posts');
+    const res = await axios.get('https://taskplanet-server-td9i.onrender.com/api/posts');
     setPosts(res.data);
   };
 
